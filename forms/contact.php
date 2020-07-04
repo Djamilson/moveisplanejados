@@ -32,6 +32,8 @@
     'auth' => true,
     'username' => 'djamilson@gmail.com',
     'password' => '1costa23',
+    'mailtype'  => 'html', 
+    'charset'   => 'iso-8859-1'
    
   );
   
