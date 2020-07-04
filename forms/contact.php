@@ -29,7 +29,7 @@
 
     'host' => 'ssl://smtp.gmail.com',
     'port' => '465',
-    'auth' => true,
+    'auth' => false,
     'username' => 'djamilson@gmail.com',
     'password' => '1costa23',
     'mailtype'  => 'html', 
