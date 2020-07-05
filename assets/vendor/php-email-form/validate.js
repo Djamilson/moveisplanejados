@@ -124,9 +124,11 @@
     this_form.find(".sent-message").slideUp();
     this_form.find(".error-message").slideUp();
     this_form.find(".loading").slideDown();
-
-    if ($(this).data("recaptcha-site-key")) {
-      var recaptcha_site_key = $(this).data("recaptcha-site-key");
+    console.log("Teset::");
+    if ($(this).data("6Lc62K0ZAAAAABMHxvNNyFYEchrj5LqCMnt2TjGa")) {
+      var recaptcha_site_key = $(this).data(
+        "6Lc62K0ZAAAAABMHxvNNyFYEchrj5LqCMnt2TjGa"
+      );
       grecaptcha.ready(function () {
         grecaptcha
           .execute(recaptcha_site_key, { action: "php_email_form_submit" })
@@ -139,6 +141,7 @@
           });
       });
     } else {
+      console.log("Entrou no else:::");
       php_email_form_submit(this_form, action, this_form.serialize());
     }
 
