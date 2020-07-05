@@ -156,11 +156,14 @@
       timeout: 40000,
     })
       .done(function (msg) {
+         console.log("MSG::", msg);
         if (msg == "OK") {
+            console.log("ok::", msg);
           this_form.find(".loading").slideUp();
           this_form.find(".sent-message").slideDown();
           this_form.find("input:not(input[type=submit]), textarea").val("");
         } else {
+            console.log("MSG:: 2", msg);
           this_form.find(".loading").slideUp();
           if (!msg) {
             msg =
