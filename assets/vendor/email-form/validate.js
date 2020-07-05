@@ -103,9 +103,13 @@
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
+    console.log('cat==>>>', e.target.g-recaptcha.value)
+    console.log("cat==>>>", e.target);
+    
+    
 
-    if ( $(this).data('6Lc62K0ZAAAAABMHxvNNyFYEchrj5LqCMnt2TjGa') ) {
-      var recaptcha_site_key = $(this).data('6Lc62K0ZAAAAABMHxvNNyFYEchrj5LqCMnt2TjGa');
+    if ( $(this).data('6Le84a0ZAAAAABAse0jD2plRF3lRU_tpgtaydgJP') ) {
+      var recaptcha_site_key = $(this).data('6Le84a0ZAAAAABAse0jD2plRF3lRU_tpgtaydgJP');
       grecaptcha.ready(function() {
         grecaptcha.execute(recaptcha_site_key, {action: 'php_email_form_submit'}).then(function(token) {
           php_email_form_submit(this_form,action,this_form.serialize() + '&recaptcha-response=' + token);
@@ -128,8 +132,12 @@
     }).done( function(msg){
       if (msg.result == 'success') {
         this_form.find('.loading').slideUp();
-        this_form.find('.sent-message').slideDown();
+        this_form.find('.sent-message').slideDown().delay(1500).slideUp();
         this_form.find("input:not(input[type=submit]), textarea").val('');
+
+	//$j("#category_message").slideDown("fast").delay(1500).slideUp("fast");
+  return false;
+
       } else {
         this_form.find('.loading').slideUp();
         if(!msg.result) {
