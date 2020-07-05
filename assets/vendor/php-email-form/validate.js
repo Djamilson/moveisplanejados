@@ -149,11 +149,10 @@
   });
 
   function php_email_form_submit(this_form, action, data) {
-    console.log("vou enviar o email::", this_form, action, data);
+    console.log("vou enviar o email::", this_form, action);
     $.ajax({
       type: "POST",
-      url: action,
-      data: data,
+      url: action,  
       timeout: 40000,
     })
       .done(function (msg) {
@@ -173,7 +172,7 @@
         }
       })
       .fail(function (data) {
-        console.log(data);
+        console.log('Estou no erro', data);
         var error_msg = "Erro ao tentar enviar o email!<br>";
         if (data.statusText || data.status) {
           error_msg += "Status:";
