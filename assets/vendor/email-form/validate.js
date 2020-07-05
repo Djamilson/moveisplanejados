@@ -3,9 +3,7 @@
 
   $('form.email-form').submit(function(e) {
     e.preventDefault();
-    grecaptcha.reset();
-    grecaptcha.execute();
-    
+        
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
@@ -105,10 +103,7 @@
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
-    console.log('cat==>>>', e.target.g-recaptcha.value)
-    console.log("cat==>>>", e.target);
-    
-    
+   
 
     if ( $(this).data('6Le84a0ZAAAAABAse0jD2plRF3lRU_tpgtaydgJP') ) {
       var recaptcha_site_key = $(this).data('6Le84a0ZAAAAABAse0jD2plRF3lRU_tpgtaydgJP');
