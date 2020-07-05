@@ -111,18 +111,18 @@
     if ( $(this).data('6Le84a0ZAAAAABAse0jD2plRF3lRU_tpgtaydgJP') ) {
       var recaptcha_site_key = $(this).data('6Le84a0ZAAAAABAse0jD2plRF3lRU_tpgtaydgJP');
       grecaptcha.ready(function() {
-        grecaptcha.execute(recaptcha_site_key, {action: 'php_email_form_submit'}).then(function(token) {
-          php_email_form_submit(this_form,action,this_form.serialize() + '&recaptcha-response=' + token);
+        grecaptcha.execute(recaptcha_site_key, {action: 'email_form_submit'}).then(function(token) {
+          email_form_submit(this_form,action,this_form.serialize() + '&recaptcha-response=' + token);
         });
       });
     } else {      
-      php_email_form_submit(this_form,action,this_form.serialize());
+      email_form_submit(this_form,action,this_form.serialize());
     }
     
     return true;
   });
 
-  function php_email_form_submit(this_form, action, data) {
+  function email_form_submit(this_form, action, data) {
 
     $.ajax({
       type: "POST",
