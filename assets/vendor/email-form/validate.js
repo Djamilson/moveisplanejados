@@ -3,6 +3,8 @@
 
   $('form.email-form').submit(function(e) {
     e.preventDefault();
+    grecaptcha.reset();
+    grecaptcha.execute();
     
     var f = $(this).find('.form-group'),
       ferror = false,
