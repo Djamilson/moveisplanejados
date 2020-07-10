@@ -140,7 +140,7 @@ h6 {
 }
 
 #topbar .contact-info i + i {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 #topbar .languages ul {
@@ -149,11 +149,12 @@ h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #cda45e;
+  color: white;
 }
 
-#topbar .languages ul a {
-  color: white;
+#topbar .languages ul i {
+  color: #cda45e;
+  margin-right: 5px;
 }
 
 #topbar .languages ul li + li {
@@ -1425,10 +1426,9 @@ section {
   bottom: 0;
 }
 
-
 .gallery .gallery-item {
   overflow: hidden;
-  padding: 10px
+  padding: 10px;
 }
 
 .gallery .gallery-item img {
